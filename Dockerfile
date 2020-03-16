@@ -1,5 +1,5 @@
 #Dockerfile
-FROM fedora:28
+FROM fedora:31
 MAINTAINER AlexaZhou <AlexaZhou@163.com>
 
 ENV LANG=C.UTF-8
