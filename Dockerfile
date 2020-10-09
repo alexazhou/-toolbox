@@ -18,6 +18,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shan
     yum clean all && \
     cd /root && wget https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz && \
     tar -C /usr/local -xvzf go1.11.5.linux-amd64.tar.gz && \
-    rm -rf /tmp/*
+    rm -rf /tmp/* && \
+    rm -rf /root/go1.11.5.linux-amd64.tar.gz
 
 #End
