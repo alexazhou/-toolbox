@@ -4,6 +4,9 @@ MAINTAINER AlexaZhou <AlexaZhou@163.com>
 
 ENV LANG=C.UTF-8
 
+#cp prebuild bin
+COPY ./bin/jad158e/jad /usr/local/bin
+
 #install package
 RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     yum install yum-plugin-fastestmirror -y && echo "fastestmirror=true" >> /etc/dnf/dnf.conf  && \
