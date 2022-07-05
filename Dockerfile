@@ -12,7 +12,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shan
     echo -e "fastestmirror=true\nmax_parallel_downloads=10" >> /etc/dnf/dnf.conf  && \
     yum install iputils net-tools procps htop which wget tree vim file -y && \
     yum install unzip lbzip2 bzip2-devel -y && \
-    yum install openssl openssl-static openssl-devel -y && \
+    yum install openssl openssl-libs openssl-devel -y && \
     yum install git -y && \
     yum install gcc gcc-c++ -y && \
     yum install java maven -y && \
