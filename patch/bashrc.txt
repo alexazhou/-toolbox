@@ -1,4 +1,4 @@
-PATH=$PATH:/usr/local/go
+PATH=$PATH:/usr/local/go/bin
 GOROOT=/usr/local/go
 
 export PATH
