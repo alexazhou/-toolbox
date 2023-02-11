@@ -1,0 +1,5 @@
+PATH=$PATH:/usr/local/go
+GOROOT=/usr/local/go
+
+export PATH
+export GOROOT

@@ -6,6 +6,7 @@ ENV LANG=C.UTF-8
 
 #cp prebuild bin
 COPY ./bin/jad158e/jad /usr/local/bin
+COPY ./patch /root/patch
 
 #install package
 RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
@@ -22,6 +23,9 @@ RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shan
     cd /root && wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz && \
     tar -C /usr/local -xvzf go1.19.5.linux-amd64.tar.gz && \
     rm -rf /tmp/* && \
-    rm -rf /root/go1.19.5.linux-amd64.tar.gz
+    rm -rf /root/go1.19.5.linux-amd64.tar.gz && \
+    cat patch/bashrc.txt >> /root/.bashrc
+
+
 
 #End
